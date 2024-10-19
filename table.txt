@@ -1,0 +1,18 @@
+CREATE TABLE admin (
+    AdminID INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(255) NOT NULL, -- Use sufficient length for hashed passwords
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone_no VARCHAR(15) -- Adjust the length as necessary for your requirements
+);
+
+CREATE TABLE beauty_products (
+    ProductID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(100) NOT NULL,
+    Brand VARCHAR(100) NOT NULL,
+    Category VARCHAR(50),
+    Price VARCHAR(255) NOT NULL,
+    QuantityAvailable VARCHAR(255),
+    Description VARCHAR(255),
+    ImageURL VARCHAR(255)
+);
